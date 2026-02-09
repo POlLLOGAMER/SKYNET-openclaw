@@ -1,14 +1,14 @@
 # SKYNET openclaw
 
-**SKYNET openclaw** es un fork de OpenClaw enfocado en autonomía real: auto‑mejora activa, conversación automática entre peers y un estilo operativo más proactivo. Todo se controla por configuración para que puedas ajustar el nivel de autonomía.
+**SKYNET openclaw** is a fork of OpenClaw focused on real autonomy: active self-improvement, automatic peer-to-peer conversation, and a more proactive operating style. Everything is controlled by configuration so you can adjust the level of autonomy.
 
-## Qué trae (lo importante arriba)
+## What it brings (most important first)
 
-- **Auto‑mejora automática**: cada respuesta pasa por un filtro de mejora silencioso para claridad y calidad.
-- **Conversación peer‑to‑peer**: instancias OpenClaw pueden hablar entre sí vía gateway‑to‑gateway usando `peers_chat`.
-- **Modo autónomo**: el agente actúa con iniciativa dentro de las políticas de herramientas y seguridad.
+- **Automatic self-improvement**: each response goes through a silent improvement filter for clarity and quality.
+- **Peer-to-peer conversation**: OpenClaw instances can talk to each other via gateway-to-gateway using `peers_chat`.
+- **Autonomous mode**: the agent acts with initiative within tool and security policies.
 
-## Configuración rápida
+## Quick configuration
 
 ```yaml
 # ~/.openclaw/config.yaml
@@ -17,21 +17,24 @@ agents:
     selfImprove:
       enabled: true
       prompt: |
-        Auto‑mejora activa. Revisa claridad, corrige errores y responde con la mejor versión.
+        Active self-improvement. Review clarity, correct errors and respond with the best version.
+```
 
 [Website](https://openclaw.ai) · [Docs](https://docs.openclaw.ai) · [DeepWiki](https://deepwiki.com/openclaw/openclaw) · [Getting Started](https://docs.openclaw.ai/start/getting-started) · [Updating](https://docs.openclaw.ai/install/updating) · [Showcase](https://docs.openclaw.ai/start/showcase) · [FAQ](https://docs.openclaw.ai/start/faq) · [Wizard](https://docs.openclaw.ai/start/wizard) · [Nix](https://github.com/openclaw/nix-openclaw) · [Docker](https://docs.openclaw.ai/install/docker) · [Discord](https://discord.gg/clawd)
 
-Preferred setup: run the onboarding wizard (`openclaw onboard`) in your terminal.
+Preferred setup: run the onboarding wizard `openclaw onboard` in your terminal.
+
 The wizard guides you step by step through setting up the gateway, workspace, channels, and skills. The CLI wizard is the recommended path and works on **macOS, Linux, and Windows (via WSL2; strongly recommended)**.
+
 Works with npm, pnpm, or bun.
+
 New install? Start here: [Getting started](https://docs.openclaw.ai/start/getting-started)
 
 **Subscriptions (OAuth):**
-
 - **[Anthropic](https://www.anthropic.com/)** (Claude Pro/Max)
 - **[OpenAI](https://openai.com/)** (ChatGPT/Codex)
 
-Model note: while any model is supported, I strongly recommend **Anthropic Pro/Max (100/200) + Opus 4.6** for long‑context strength and better prompt‑injection resistance. See [Onboarding](https://docs.openclaw.ai/start/onboarding).
+Model note: while any model is supported, I strongly recommend **Anthropic Pro/Max (100/200) + Opus 4.6** for long-context strength and better prompt-injection resistance. See [Onboarding](https://docs.openclaw.ai/start/onboarding).
 
 ## Models (selection + auth)
 
@@ -45,7 +48,6 @@ Runtime: **Node ≥22**.
 ```bash
 npm install -g openclaw@latest
 # or: pnpm add -g openclaw@latest
-
 openclaw onboard --install-daemon
 ```
 
@@ -59,7 +61,6 @@ Full beginner guide (auth, pairing, channels): [Getting started](https://docs.op
 
 ```bash
 openclaw onboard --install-daemon
-
 openclaw gateway --port 18789 --verbose
 
 # Send a message
@@ -73,8 +74,8 @@ Upgrading? [Updating guide](https://docs.openclaw.ai/install/updating) (and run 
 
 ## Development channels
 
-- **stable**: tagged releases (`vYYYY.M.D` or `vYYYY.M.D-<patch>`), npm dist-tag `latest`.
-- **beta**: prerelease tags (`vYYYY.M.D-beta.N`), npm dist-tag `beta` (macOS app may be missing).
+- **stable**: tagged releases `vYYYY.M.D` or `vYYYY.M.D-<patch>`, npm dist-tag `latest`.
+- **beta**: prerelease tags `vYYYY.M.D-beta.N`, npm dist-tag `beta` (macOS app may be missing).
 - **dev**: moving head of `main`, npm dist-tag `dev` (when published).
 
 Switch channels (git + npm): `openclaw update --channel stable|beta|dev`.
