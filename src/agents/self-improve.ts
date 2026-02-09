@@ -16,7 +16,7 @@ export function resolveSelfImprovePrompt(params: {
     ? resolveAgentConfig(params.config, agentId)?.selfImprove
     : undefined;
   const defaults = params.config.agents?.defaults?.selfImprove;
-  const enabled = agentSelfImprove?.enabled ?? defaults?.enabled ?? true;
+  const enabled = agentSelfImprove?.enabled ?? defaults?.enabled ?? false;
   if (!enabled) {
     return undefined;
   }

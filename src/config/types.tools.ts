@@ -243,7 +243,7 @@ export type PeerBotConfig = {
 };
 
 export type PeerBotsConfig = {
-  /** Enable peer chat tool (default: true). */
+  /** Enable peer chat tool (default: false). */
   enabled?: boolean;
   /** Allowlist of peer ids/patterns. */
   allow?: string[];

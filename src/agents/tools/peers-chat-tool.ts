@@ -70,7 +70,7 @@ export function createPeersChatTool(): AnyAgentTool {
 
       const cfg = loadConfig();
       const peerConfig = cfg.tools?.peers;
-      if (peerConfig?.enabled === false) {
+      if (peerConfig?.enabled !== true) {
         return jsonResult({
           status: "forbidden",
           error: "Peer chat is disabled. Set tools.peers.enabled=true to allow peers_chat.",

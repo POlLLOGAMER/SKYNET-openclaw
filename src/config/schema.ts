@@ -491,7 +491,7 @@ const FIELD_HELP: Record<string, string> = {
     'Text suffix for cross-context markers (supports "{channel}").',
   "tools.message.broadcast.enabled": "Enable broadcast action (default: true).",
   "tools.peers": "Peer bot gateway configuration and allowlist for peers_chat.",
-  "tools.peers.enabled": "Enable peer bot chat tool (default: true).",
+  "tools.peers.enabled": "Enable peer bot chat tool (default: false).",
   "tools.peers.allow": "Allowlist of peer ids/patterns for peers_chat.",
   "tools.peers.peers": "List of known peer gateways.",
   "tools.peers.peers[].id": "Stable peer id for peers_chat.",
